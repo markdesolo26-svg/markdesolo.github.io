@@ -36,7 +36,6 @@
 
         .tagline { color: var(--text-muted); font-size: 1.2rem; margin: 10px 0; }
 
-        /* BUTTON STYLES WITH ICONS & HOVER */
         .btn-container { display: flex; gap: 15px; justify-content: center; margin-top: 25px; }
         
         .btn {
@@ -47,9 +46,9 @@
             transition: all 0.3s ease; 
             border: none; 
             cursor: pointer;
-            display: inline-flex; /* Changed to flex for icon alignment */
+            display: inline-flex; 
             align-items: center;
-            gap: 10px; /* Space between icon and text */
+            gap: 10px; 
             font-size: 0.95rem;
         }
 
@@ -101,6 +100,20 @@
             margin: 4px; border: 1px solid #38bdf840;
         }
 
+        .competency-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .competency-item i {
+            color: var(--secondary);
+            width: 20px;
+            text-align: center;
+        }
+
         .date { color: var(--secondary); font-size: 0.85rem; font-weight: bold; }
 
         @media print {
@@ -111,6 +124,7 @@
             h1 { color: black !important; background: none; -webkit-text-fill-color: black; font-size: 24pt; }
             .section-title { color: black; border-bottom: 2px solid black; }
             .skill-tag { border: 1px solid black; color: black; background: none; }
+            .competency-item i { color: black; }
         }
 
         @media (max-width: 768px) { 
@@ -125,7 +139,10 @@
     <header>
         <h1>Mark Ronel E. Desolo</h1>
         <p class="tagline">BSIT Business Analytics | Salesforce & Data Associate</p>
-        <p style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-regular fa-envelope"></i> markdesolo26@gmail.com | <i class="fa-solid fa-location-dot"></i> Bulacan, Philippines</p>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fa-regular fa-envelope"></i> markdesolo26@gmail.com | 
+            <i class="fa-solid fa-location-dot"></i> Bulacan, Philippines
+        </p>
         
         <div class="btn-container">
             <a href="https://www.linkedin.com/in/mark-desolo" target="_blank" class="btn btn-contact">
@@ -164,13 +181,19 @@
             </ul>
         </div>
 
-        <h2 class="section-title">Education</h2>
-        <div class="card" style="grid-column: 1 / -1;">
-            <div style="display: flex; justify-content: space-between;">
-                <h3>BS in Information Technology (Business Analytics)</h3>
-                <span class="date">2019 — 2023</span>
-            </div>
-            <p>Bulacan State University</p>
+        <h2 class="section-title">Education & Competencies</h2>
+        <div class="card">
+            <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+            <p><strong>BS in IT (Business Analytics)</strong></p>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Bulacan State University<br>2019 — 2023</p>
+        </div>
+
+        <div class="card">
+            <h3><i class="fa-solid fa-user-check"></i> Core Skills</h3>
+            <div class="competency-item"><i class="fa-solid fa-users-gear"></i> Leadership</div>
+            <div class="competency-item"><i class="fa-solid fa-comments"></i> Communication</div>
+            <div class="competency-item"><i class="fa-solid fa-brain"></i> Analytical Thinking</div>
+            <div class="competency-item"><i class="fa-solid fa-shield-halved"></i> Adaptability</div>
         </div>
     </div>
 </div>
